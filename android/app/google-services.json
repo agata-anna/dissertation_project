@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "580445240697",
+    "project_id": "dissertation-project-c4de1",
+    "storage_bucket": "dissertation-project-c4de1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580445240697:android:b6ad99590cf7aabc3f83a8",
+        "android_client_info": {
+          "package_name": "com.example.application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgKwcka8Wm-TbAwxM1U5iDvYACawrOeDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
