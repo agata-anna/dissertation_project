@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:application_1/components/welcome_button.dart';
+import 'package:application_1/provider/auth_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:country_picker/country_picker.dart';
+import 'package:provider/provider.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -85,13 +87,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               SizedBox(height: 20),
-              MyButton(text: "Send Code", onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterScreen()));
-              }),
+              MyButton(text: "Send Code", onPressed: () => sendPhoneNumber()),
             ],
           ),
         ),
         ),
     );
+  }
+
+  void sendPhoneNumber(){
+    //+441234567891
+    final ap = Provider.of<AuthProvider>(context, listen: false);
+    String phoneNumber = phoneController.text.trim(); //removing white space from spaces
+    ap.signInWithPhone(context, "+${selectedCountry.phoneCode}$phoneNumber");
   }
 }

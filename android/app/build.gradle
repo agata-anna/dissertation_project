@@ -37,7 +37,12 @@ android {
         // targetCompatibility = JavaVersion.VERSION_1_8
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
+        //options.compilerArgs << "-Xlint:deprecation"
     }
+
+//     tasks.withType(JavaCompile) {
+//     options.compilerArgs << "-Xlint:deprecation"
+// }
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
@@ -45,7 +50,7 @@ android {
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         //minSdk = flutter.minSdkVersion
-        minSdkVersion 21
+        minSdkVersion 23
         //targetSdk = flutter.targetSdkVersion
         targetSdkVersion 34
         versionCode = flutterVersionCode.toInteger()
